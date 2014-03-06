@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <!-- add a title to do this document. call it 'Suggestions' -->
+  <title>Suggestions</title><!-- add a title to do this document. call it 'Suggestions' -->
 </head>
 <body>
 
@@ -10,30 +10,81 @@
 
     <!-- Turn the following text into an unordered list with each item of the list linking to the appropriate web page. Indicate this page by making the text strong. -->
 
-    Index
-    Syllabus
-    Resources
-    Sections
-    Suggestions
-    People
+    <ul>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/index.html">
+            <strong>Index</strong>
+            </a>
+        </li>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/syllabus.html">
+            <strong>Syllabus</strong>
+            </a>
+        </li>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/resources.html">
+            <strong>Resources</strong>
+            </a>
+        </li>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/sections.html">
+            <strong>Sections</strong>
+            </a>
+        </li>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/suggestions.html">
+            <strong>Suggestions</strong>
+            </a>
+        </li>
+        <li>
+            <a href="http://0.0.0.0:8000/html-lesson/people.html">
+            <strong>People</strong>
+            </a>
+        </li>
+    </ul>
 
   </nav>
 
   <section>
 
-    Contact Us <!-- Turn this into an h3 element -->
+    <h3>Contact Us</h3> <!-- Turn this into an h3 element -->
 
     <!-- In this section, create a form that allows people to send questions to the customer service department of your online business. Your form should have text inputs for a person's name and email address as well as a dropdown list (select tag) for the type of question [Bug Report, Feature Request, Sales, Other] and a text area for the question itself.
 
     Each element of the form should be on it's own line, and each element should have a label identifying what it is, e.g. Name, Email, Query, and Question. Add an action to the form that points to this page, and add a Submit button that triggers the action. Naturally, the form won't do anything except  reload the page, but it's a start! -->
 
-    Name
+    <form action="http://0.0.0.0:8000/html-lesson/suggestions.html">
 
-    Email
+    	<p>
+		    <label for="Name">Name</label>
+		    <input type="text" name="Name" value="First Last">
+		</p>
 
-    Query
+		<p>
+		    <label for="Email">Email</label>
+		    <input type="text" name="Email" value="example@example.com">
+		</p>
 
-    Question
+		<p>
+		    <label for="Query">Query</label>
+		    <select>
+		    	<option value="Bug Report">Bug Report</option>
+		    	<option value="Feature Request">Feature Request</option>
+		    	<option value="Sales">Sales</option>
+		    	<option value="Other">Other</option>
+		    </select>
+	    </p>
+
+	    <p>
+		    <label for="Question">Question</label>
+		    <textarea rows="2" cols="50">Ask your question here</textarea>
+	    </p>
+
+	    <p>
+	    	<input type="submit" value="Submit">
+	    </p>
+
+	</form>
 
   </section>
 
