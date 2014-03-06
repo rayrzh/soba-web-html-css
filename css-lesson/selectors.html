@@ -24,11 +24,23 @@
     10px margin to the sides.
     */
 
+    html {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
     /*
     You can override built-in styling. Style the tag that makes links so
     that it no longer has an underline and the text appears in a normal black
     color.
     */
+
+    a {
+      text-decoration: none;
+      color: black; 
+    }
 
     /*
     Pseudo-selectors let you target a limited subset of a specific tag and
@@ -37,21 +49,40 @@
     when you mouse over them. But still no underline.
     */
 
+    a:hover {
+      color:blue;
+    }
+
     /* 
     Tags can target classes, and classes can be applied to many tags.
     Target the `big` class and set the font size to 32 pixels. 
     */
+
+    .big {
+      font-size: 32px;
+    }
 
     /*
     Target the `container` class so that it has a width of 960 pixels and its
     content is centered on the page. Do not center the text! Center the div.
     */
 
+    .container {
+      width: 960px;
+      vertical-align: center;
+    }
+
     /* 
     Tags can target id's, but an id must be unique to a single element.
     Target the `navigation` id and give it some margin, some padding and a nice
     background color
     */
+
+    #navigation {
+      margin: 1px;
+      padding: 1px;
+      background-color: #ccc;
+    }
 
     /*
     id's are not classes! Notice that we have a `footer` classe and a `footer` id.
@@ -61,10 +92,25 @@
     Target the `footer` id so that it has top padding of 10pixels and a solid black border on the top.
     */
 
+    .footer {
+      margin-top: 20px;
+    }
+
+    #footer {
+      padding-top: 10px;
+      border-top-style: solid;
+      border-top-color: black;
+    }
+
+
     /*
     You can target more than one selector at a time using commas, e.g. `big, small {...}`
     Target the h1 and h3 tags in the same line and set the text color to green.
     */
+
+    h1, h3 {
+      color: green;
+    }
 
     /*
     You can combine selectors to target highly specific subsets. Using the period with no spaces
@@ -75,6 +121,24 @@
     black. Do the same for the section whose id is `english-text`. Use the selector combination with
     the period (.)
     */
+    /*========================================================================================================*/
+    /* !!!period does not work!!!  latin-text and english-text are ids, should use '#' instead to make them work
+    section.latin-text {
+      color: #303030;
+    }
+
+    section.english-text {
+      color: #303030;
+    }
+    */
+    section#latin-text {
+      color: #303030;
+    }
+
+    section#english-text {
+      color: #303030;
+    }
+    /*========================================================================================================*/
 
     /*
     You can target descendants of a selector by adding a space between the selectors.
@@ -83,6 +147,10 @@
 
     Target only those paragraphs that are inside a section. Set their font to a serif style.
     */
+
+    section p {
+      font-family: serif;
+    }
 
     /*
     We can be even more specific with our descendant targets. We can target only the direct
@@ -94,6 +162,10 @@
     color to be red.
     */
 
+    section#english-text > h3 {
+      color: red;
+    }
+
     /*
     We can target siblings in addition to children. Siblings live on the same tree level. They
     are immediate descendants of the same node. We target siblings with the plus symbol (+),
@@ -101,6 +173,10 @@
 
     Target the second paragraph in the latin text using the sibling selector and italicize it.
     */
+
+    section#latin-text p + p {
+      font-style: italic;
+    }
 
     /*
     We've already seen pseudo-selectors that let us control when we hover over a link.
@@ -110,11 +186,19 @@
     a light grey
     */
 
+    p:hover {
+      background-color: #d3d3d3;
+    }
+
     /*
     Other pseudo-selectors let us target specific children of an element. Find them on the
     internet, and target the first child of the ul inside our navigation and set give it 
     a font size 1.5 times larger than its default (use a relative font size).
     */
+
+    nav#navigation ul > :first-child {
+      font-size: 1.5em;
+    }
 
     /*
     We can combine selectors in very large chains to target extremely specific parts of our
